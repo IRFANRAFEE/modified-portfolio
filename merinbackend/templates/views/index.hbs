@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Irfan Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,11 +14,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=REM:wght@300&display=swap" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
   <style>
+    .upperitem{
+      display: flex;
+    }
+    .navbar-brand img{
+      width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    }
+    .upperitem img{
+      width: 26rem;
+    height: 26rem;
+    margin-top: 4rem;
+    margin-left: 10rem;
+    border-radius: 50%;
+    border: 2px solid #b12525;
+    box-shadow: 7px 5px 3px 8px #b12525;
+    transform: translateX(100%);
+    animation:leftdraw 1s ease-in-out 1  forwards ;
+    }
+    @keyframes leftdraw {
+      0%{
+        translate: 0px;
+      }
+      100%{
+transform: translateX(-10rem);
+      }
+    }
+    
     .fw-bold {
       font-size: 4rem;
       font-family: 'REM', sans-serif;
       margin: 4rem 7rem;
+      transform: translateX(-120%);
+      animation: drawright 1s  ease-in-out  1  forwards ;
+    }
+    @keyframes drawright{
+      0%{
+   translate:0px;
+      }
+      100%{
+       transform: translateZ(5rem);
+    }
     }
 
     .para {
@@ -29,11 +73,17 @@
     }
 
     .btnn {
-      margin: 6rem 7rem;
+      margin: -3rem 7rem;
       width: 7rem;
       height: 3rem;
       background-color: rgb(218, 18, 18);
       color: white;
+    }
+    .btnn:hover{
+   color: rgb(218, 18, 18);
+    background-color: white;
+    border-radius: 14px;
+
     }
 
     .container {
@@ -56,6 +106,37 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .upperitem span::before{
+content: "";
+animation: animate 8s  infinite  ;
+    }
+    @keyframes animate{
+      0%{
+        content: "web Developer";
+        color: #ad2222;
+      }
+      25%{
+        content: "Web Designer";
+        color: #816565;
+        
+      }
+      50%{
+        content: "Backend Dev.";
+        color: aqua;
+      }
+      75%{
+        content: "MERN Developer";
+        color: blueviolet;
+      }
+      100%{
+        content: "FreeLancer";
+        color: #059ca7;
+      }
+    }
+    .upperitem span{
+    
+      
     }
 
     .left {
@@ -88,13 +169,15 @@
       font-size: 16px;
       color: rgb(39, 36, 36);
       margin-top: 2rem;
+      transition: ;
     }
 
-    .image {
-      background-color: red;
-      margin: 2rem 9rem;
-      width: 22rem;
-      height: 15rem;
+    .image img {
+      width: 23rem;
+    height: 20rem;
+    /* margin-bottom: 8rem; */
+    margin-top: -2rem;
+    margin-left: 8rem;
      
     }
     #myskill h2 {
@@ -304,27 +387,115 @@ font-family: 'REM', sans-serif;
       font-size: xx-large;
       font-weight: 800;
     }
+    .servicess{
+      display: grid;
+      grid-template-columns: 19rem 19rem 19rem 19rem;
+      margin: 2rem 8rem;
+    }
+    .underlines{
+      width: 7rem;
+    height: 4px;
+    background-color: #036042;
+    /* display: flex; */
+    opacity: 0.6;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-left: 39rem;
+    border-radius: 10px;
+    }
+    .serviceheading{
+      text-align:center;
+      font-size: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #059ca7;
+      animation: wiggle 4s infinite linear ;
+    }
+    @keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+    .grid-item{
+    margin: 2px;
+    text-align: center;
+    height: 12rem;
+    background-color: #c6ddc67a;
     
-    
+}
+
+.grid-item:hover{
+  background-color:blue;
+  color: white;
+  opacity: 0.6;
+  animation: wiggles 4s infinite linear ;
+}
+
+    @keyframes wiggles {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+  .imgs img{
+    width: 2rem;
+    height: 2rem;
+  }  
   .mb-4{
     padding: 2rem;
     background-color: rgba(31, 173, 173, 0.897);
+    color: #816565;
   }
 .footer{
   display: flex;
   justify-content: space-around;
   background-color: rgb(15, 15, 15);
   color: white;
-  font-family: 'REM', sans-serif;
+ font-family: HelveticaNowMTText,Lucida Sans,Lucida Grande,Lucida Sans Unicode,Trebuchet MS,sans-serif;
+    font-size: 13px;
 }
 .socialmedia a{
-  background-color: #059ca7;
   color: white;
   margin: 5px;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 23px;
 }
 .form{
   display: flex;
@@ -332,25 +503,33 @@ font-family: 'REM', sans-serif;
   align-items: center;
 
 }
+.form label{
+  text-align: right;
+  margin-right: 22rem;
+}
 #mytext{
   width: 29rem;
-    border-radius: 9px;
-    height: 2.5rem
+    border-radius:35px;
+    height: 2.5rem;
+    padding: 10px 10px;
 }
 #myemail{
    width: 29rem;
-    border-radius: 9px;
-    height: 2.5rem
+    border-radius:35px;
+    height: 2.5rem;
+    padding: 10px 10px;
 }
 #mysubject{
    width: 29rem;
-    border-radius: 9px;
-    height: 2.5rem
+    border-radius: 35px;
+    height: 2.5rem;
+    padding: 10px 10px;
 }
 #mytextarea{
   width: 24rem;
     height: 11rem;
     border-radius: 10px;
+    padding: 10px 10px;
 }
 #mybtn{
   width: 5rem;
@@ -360,13 +539,58 @@ font-family: 'REM', sans-serif;
     color: #edcece;
     font-size: 16px;
 }
+.navbar-brand{
+font-family: 'Tilt Prism';
+}
+#logo {
+  border: 2px solid white;
+    height: 26px;
+    width: 26px;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 50%;
+}
+ span {
+  color: #059ca7;
+}
 
-    @media(max-width:414px) {
+    @media(max-width:820px) {
+      .upperitem {
+        display: flex;
+        flex-direction: column;
+      }
+      .upperitem img{
+        width: 17rem;
+    height: 17rem;
+    margin-top: -4rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+    border: 2px solid #b12525;
+    box-shadow: 7px 5px 3px 8px #b12525;
+    animation:leftdraw 1s ease-in-out 1 forwards ;
+      }
+      @keyframes leftdraw {
+        0%{
+          translate: 0px;
+        }
+        100%{
+          translate: -16rem;
+        }
+      }
       .fw-bold {
         margin: 5rem 2rem;
         font-size: 3rem;
+        animation:rightdraw 1s ease-in-out 1 forwards ;
       }
-
+      @keyframes rightdraw {
+        0%{
+          translate: 0px;
+        }
+        100%{
+          translate:26rem;
+    
+        }
+      }
       .para {
         margin: 4rem 0rem;
         font-size: 2rem;
@@ -374,10 +598,10 @@ font-family: 'REM', sans-serif;
       }
 
       .btnn {
-        margin: -20px 33px;
-        font-size: 2rem;
-        width: 13rem;
-        height: 5rem;
+        margin: 20px 74px;
+    font-size: 2rem;
+    width: 13rem;
+    height: 5rem;
 
       }
 
@@ -403,8 +627,12 @@ font-family: 'REM', sans-serif;
         font-size: 30px;
       }
 
-      .image {
-        margin: 2rem 1rem;
+      .image  img{
+       width: 23rem;
+    height: 20rem;
+    /* margin-bottom: 8rem; */
+    margin-top: 1rem;
+    margin-left: 0rem;
       }
 
       .skillsection {
@@ -440,27 +668,128 @@ font-family: 'REM', sans-serif;
     .text-center{
       font-size: 26px;
     }
+    #mytext{
+      width: 24rem;
+    border-radius: 35px;
+    height: 3.5rem;
+    font-size: 1.5rem;
+
+    }
+    #myemail{
+      width: 24rem;
+    border-radius: 35px;
+    height: 3.5rem;
+    font-size: 1.5rem;
+
+    }
+    #mysubject{
+       width: 24rem;
+    border-radius: 35px;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    }
     .footer{
       display: flex;
     justify-content: space-around;
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(3, 3, 3);
     color: white;
     flex-direction: column;
     padding: 2rem;
+    font-size:24px;
     }
     label{
-      font-size: 2rem;
-    font-family: 'REM';
+     font-size: 25px;
+    /* font-family: 'REM'; */
     font-weight: 500;
+    margin-left: 5rem;
     }
+    .servicess{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+    .grid-item{
+     height: 14rem;
+    width: 20rem;
+    border-radius: 10px;
+    border: none;
+     animation: wigglesw 4s infinite linear ;
+    }
+     @keyframes wigglesw {
+  0%, 7% {
+    transform: rotateZ(0);
+    color: #059ca7;
+  }
+  15% {
+    transform: rotateZ(-15deg);
+    color: #059ca7;
+  }
+  20% {
+    transform: rotateZ(10deg);
+    color: #059ca7;
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+    color: #059ca7;
+  }
+  35% {
+    transform: rotateZ(-4deg);
+    color: #059ca7;
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+    color: #059ca7;
+  }
+}
+
+    .grid-item:hover{
+  background-color:blue;
+  color: white;
+  opacity: 0.6;
+ 
+}
+ .imgs h5{
+      color: black;
+      font-size: 1.5rem;
+    }
+    .imgs p{
+      font-size: 1rem;
+    }
+    .underlines{
+      width: 7rem;
+    height: 4px;
+    background-color: #036042;
+    /* display: flex; */
+    opacity: 0.6;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-left: 9rem;
+    border-radius: 10px;
+}
+#logo{
+border: 2px solid white;
+    height: 42px;
+    width: 42px;
+    width: 37px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+    }
+
+   
+    
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">IRFAN</a>
+      <a class="navbar-brand" href="#"><img src="https://i.ytimg.com/vi/iiyQ8F9Sg_Q/maxresdefault.jpg?sqp=-oaymwEoCIAKENAF8quKqQMcGADwAQH4AbYIgALECooCDAgAEAEYDyBlKGEwDw==&rs=AOn4CLCiXglaOH9Wx28WNhoq-31Avseq8Q" alt="" srcset=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -477,7 +806,7 @@ font-family: 'REM', sans-serif;
             <a class="nav-link" href="#myskill">Skill</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#myfooter">Services</a>
+            <a class="nav-link" href="#myservices">Services</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#mycontact"><button class="btn btn-primary" type="submit">Contact</button></a>
@@ -487,10 +816,14 @@ font-family: 'REM', sans-serif;
       </div>
     </div>
   </nav>
-  <p class="fw-bold">Hy ! I Am <br>Irfan Rafee.</p>
-  <div class="para"><h2> MERN Web Developer</h2>
-  <h2>Web Designer</h2>
-  <h3>FullStack Developer</h3></div>
+  <div class="upperitem">
+    <div class="upperitenleft">
+  <p class="fw-bold">Hy ! I Am <br>Irfan Rafee I'm <span></span></p>
+  </div>
+  <div class="upperitemrigt">
+    <img src="https://pps.whatsapp.net/v/t61.24694-24/291494228_431480668875104_7175860955078126937_n.jpg?ccb=11-4&oh=01_AdRAQl5KNrB0y6zXum84MQqgs6jlaHgdMYIIyb_12xQ7ww&oe=650E8943&_nc_sid=000000&_nc_cat=100" alt="" srcset="">
+  </div>
+  </div>
   <div class="d-grid gap-2 d-md-block">
   <a href="#mycontact">  <button class="btnn" type="submit">Hire Me</button>
  </a> </div>
@@ -505,7 +838,7 @@ font-family: 'REM', sans-serif;
       design and cutting-edge technology.<br> Dedicated to translating ideas into dynamic websites that engage users
       <br>and leave a lasting impact.Let's collaborate to bring your digital vision to life.
     </p>
-    <div class="image"><img src="/public/images folder/7-74965_businessman-business-man-images-png.png"
+    <div class="image"><img src="https://img.freepik.com/free-vector/programming-concept-illustration_114360-1351.jpg"
         alt="error loading..." srcset=""></div>
   </div>
   <hr>
@@ -546,6 +879,34 @@ font-family: 'REM', sans-serif;
        </div>
     </div>
     <hr>
+    {{!-- services <section></section> --}}
+    <div class="serviceheading"  id="myservices">My Services
+      <div class="underlines"></div>
+    </div>
+    <div class="servicess">
+      <div class="grid-item"> 
+        <div class="imgs"><img src="https://w7.pngwing.com/pngs/738/965/png-transparent-web-development-web-design-software-development-web-developer-web-design-blue-angle-web-design-thumbnail.png" alt="" srcset="">
+      <h5> webdesign</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error commodi hic nihil cumque molestiae sunt, quia, nisi dolores iste itaque cupiditate aut earum in porro expedita natus nam, rem ea!</p></div>
+      </div>
+      <div class="grid-item"> 
+        <div class="imgs"><img src="https://w7.pngwing.com/pngs/738/965/png-transparent-web-development-web-design-software-development-web-developer-web-design-blue-angle-web-design-thumbnail.png" alt="" srcset="">
+      <h5>Freelancing</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error commodi hic nihil cumque molestiae sunt, quia, nisi dolores iste itaque cupiditate aut earum in porro expedita natus nam, rem ea!</p></div>
+      </div>
+
+      <div class="grid-item">
+        <div class="imgs"><img src="https://w7.pngwing.com/pngs/738/965/png-transparent-web-development-web-design-software-development-web-developer-web-design-blue-angle-web-design-thumbnail.png" alt="" srcset="">
+      <h5>Backend Development</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error commodi hic nihil cumque molestiae sunt, quia, nisi dolores iste itaque cupiditate aut earum in porro expedita natus nam, rem ea!</p></div>
+      </div>
+      <div class="grid-item">
+        <div class="imgs"><img src="https://w7.pngwing.com/pngs/738/965/png-transparent-web-development-web-design-software-development-web-developer-web-design-blue-angle-web-design-thumbnail.png" alt="" srcset="">
+      <h5> UI/UX</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error commodi hic nihil cumque molestiae sunt, quia, nisi dolores iste itaque cupiditate aut earum in porro expedita natus nam, rem ea!</p>
+      </div>
+      </div>
+    </div>
     <!--Section: Contact v.2-->
 <section class="mb-4" id="mycontact">
     <!--Section heading-->
@@ -555,9 +916,9 @@ font-family: 'REM', sans-serif;
         a matter of hours to help you.</p>
 <form action="/index" method="post">
 <div class="form">
-  <label for="mytext">Name</label>
+  <label for="mytext">  Name</label>
  <div class="name"><input type="text" name="name" id="mytext"></div>
-  <label for="myemail">Email:</label>
+  <label for="myemail">  Email</label>
   <div class="email"><input type="email" name="email" id="myemail"></div>
   <label for="mysubject">Subject</label>
   <div class="sub"><input type="text" name="subject" id="mysubject"></div>
@@ -606,12 +967,13 @@ font-family: 'REM', sans-serif;
   </div>
   <div class="locaton"><p> Srinager,Larmooh Awantipora </p></div>
   </div>
-  <div class="services">
-  <h4>We are providing Services like : </h4>
-  <p>Front end Apps:</p>
-  <p>Backend Aaps:</p>
-  <p>FullStack Development:</p>
-  <p>Backend Aaps:</p>
+  
+  <div class="copyright">
+    <div class="circle">
+      <p id="logo">c</p>
+      <span>Copyright Irfan Rafee.All Rights Reserved</span>
+      <p id="design">Designed By <span>Irfan Rafee</span></p>
+    </div>
   </div>
 </footer>
  
